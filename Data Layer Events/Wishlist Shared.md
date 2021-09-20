@@ -1,0 +1,35 @@
+# Wishlist Shared
+
+### 
+
+## Javascript Code
+```js
+window.appEventData09876 = window.appEventData09876 || [];
+appEventData09876.push({
+  "event": "Wishlist Shared",
+    "product": [
+        {
+            "productInfo": {
+                "productID": "<productID>",
+                "sku": "<sku>"
+            }
+        }
+    ],
+    "wishlist": {
+        "total": {
+            "value": "<value>"
+        }
+    }
+});
+```
+
+## Variable Definitions
+
+|Field|Type|Description|Example|Pattern|Min Length|Max Length|Minimum|Maximum|Multiple Of|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|productID|string|Unique Identifier of a product or offering.  Must match the format of back-end systems if used as a key for import of product meta data. Most often, one level above SKU for products with SKU variants. |155, 65588, 987764448|||||||
+|sku|string|Stock Keeping Unit \(SKU\) Unique Identifier of specific item \(typically\) held in inventory.  Must match the format of back-end systems if used as a key for import of product meta data. Most often, one level below productID for products with SKU variants. |34567890, 4567890, 00155-large-cornflower|||||||
+|value|string|String representation of the total value of all products in a wishlist. Positive. Up to two decimal places for cents. No currency symbol.|5, 20, 10.22|^[0-9]*(\.[0-9]{1,2})?$||||||
+
+
+
